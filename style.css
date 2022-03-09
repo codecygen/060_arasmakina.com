@@ -1,0 +1,904 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* Width and height apply to all parts of the element: content, padding and borders */
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Sansita";
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+    background: #ECEDFF;
+    background-image: url("images-website/body.png");
+    
+    
+    /* These lines are to disable highlighting text */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+    
+    /* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> */
+    /* Use these 2 to disable finger zooming in mobile mode. */
+    /* touch-action: manipulation; */
+}
+
+div#productsContent br{
+    line-height: 0px;
+}
+
+div#productsContent p{
+    margin-top: -12px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #136a8a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    width: 100%;
+    box-shadow: 5px 10px 70px 15px #888888;
+    color: #f4f4f4;
+    text-shadow: 1px 1px #020202;
+    font-size: 15px;
+    z-index: -1;
+    position: relative;
+    bottom: 0;
+    
+    font-family: "Sansita";
+}
+
+footer #gear{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+footer #footer-top{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+    font-style: oblique;
+}
+
+footer > p{
+    margin-left: 15px; /*This is special for media 501 */
+    margin-bottom: 15px;
+}
+
+#body-part{
+    width: 100%;
+    min-height: 100vh;
+    z-index: -5;
+}
+
+#homeContent{
+    display: block;
+    text-align: center;
+    text-shadow: 1px 0 #242424;
+    color: #2a2a2a;
+}
+
+#intro{
+    height: 400px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+    background-image: url("images-website/together.jpg");
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 10%), url("images-website/together.jpg");
+
+}
+
+#homeSlideContainer{
+    position: relative;
+    top: 2px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+    background: rgb(245,246,246); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+    margin-top: 50px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.homeSlide{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 45vw;
+    /* clip-path: inset(10% 0 5% 0); */
+    border: 1px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+    border-radius: 10px 30px 10px 30px;
+    
+    -webkit-animation-name: fading;
+    -webkit-animation-duration: 1s;
+    animation-name: fading;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes fading {
+   from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fading {
+   from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*
+#homeContent > div{
+    background-image: url("welder.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+#homeContent p{
+    color: #2a2a2a;
+}
+
+#homeMain{
+    margin-top: 50px;
+}
+
+#exploreButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+#exploreButton a{
+    text-decoration: none;
+    color: #2a2a2a;
+    border: 2px solid #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    background: none;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+#exploreButton a:hover{
+    background: rgba(157, 34, 53, 0.5);
+    color: rgb(255, 255, 255);
+    border-color: rgb(88, 66, 66);
+}
+
+#aboutUsContent{
+    display: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#aboutUsContent > div{
+    background-image: url("images-website/entrance.jpg");
+    background-size: cover;
+    height: 400px;
+    margin-left: -20px;
+    margin-right: -20px;
+    position: relative;
+    top: 0;
+    
+    /* This is used to fix the position of the image. Parallax code, does not work in some browsers
+    background-attachment: fixed; */
+    
+    
+    /*
+    background-position: 0 44px;
+    background-repeat: no-repeat; */
+}
+
+#productsContent{
+    display: none;
+    position: relative;
+}
+
+#smoothScroll{
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    background: rgba(2, 19, 25, 0.6);
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 200%;
+    border-radius: 20px;
+    color: white;
+}
+
+#tableFeet{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+#moldingGears{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+#tableFeet span{
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    /*More gap from bottom of the picture on vertical direction*/
+    margin: 20px 0 0 0;
+}
+
+#tableFeet span p{
+    text-align: center;
+}
+
+#moldingGears span{
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    /*More gap from bottom of the picture on vertical direction*/
+    margin: 20px 0 0 0;
+}
+
+#moldingGears span p{
+    text-align: center;
+}
+
+
+
+#tableFeet img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    /*width: 80%;*/
+    box-shadow: 4px 5px 12px 0px rgba(0,0,0,0.75);
+    border-radius: 15px;
+    border: 1px solid black;
+    background: rgba(0, 119, 115, 0.32);
+}
+
+#moldingGears img{
+    margin-left: auto;
+    margin-right: auto;
+    height: 80%;
+    /*width: 80%;*/
+    box-shadow: 4px 5px 12px 0px rgba(0,0,0,0.75);
+    border-radius: 15px;
+    border: 1px solid black;
+    background: rgba(0, 119, 115, 0.32);
+}
+
+#landscape{
+    margin-top: 45px;
+    height: 120px !important;
+    width: 160px;
+}
+
+#tableFeet p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+#moldingGears p{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+#backgroundBlur{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1500;
+    background-color: rgba(113, 105, 105, 0.92);
+    color: white;
+    font-size: 100px;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.7;
+}
+
+#arrowLayer{
+    display: none;
+    position: fixed;
+    height: 10%;
+    width: 80%;
+    z-index: 2001;
+    font-size: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    
+    /* These are color for arrow texts */
+    color: #e5f8f8;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    opacity: 0.9;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    
+    
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+#arrowLayer div{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+#arrowLayer div:hover{
+    cursor: pointer;
+}
+
+#windowSlide{
+    position: fixed;
+    display: none; /* It is being changed to flex in Javascript, windowSlide dimensions and position also determined in JS */
+    flex-direction: column;
+    background-color: #ffffff;
+    z-index: 2000;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 16px;
+    background: rgba(140, 181, 199, 0.86);
+    
+    /* Zoom in animation for photos */
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+#closeSlide{
+    display: none;
+}
+
+#closeSlide p{
+    margin-left: 85%;
+    width: 15%;
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 10000000;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+#closeSlide p:hover{
+    cursor: pointer;
+}
+
+#photoSlide img{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 16px 16px 8px 8px;
+}
+
+#captionSlide{
+    /*margin-top: -50px;*/
+    text-align: center;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#contactContent{
+    display: none;
+    margin: 20px;
+}
+
+#map{
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    margin: 25px;
+}
+
+#map iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media(min-width: 1417px){
+    /*This is a subproduct top distance adjustment */
+    
+    #tableFeet span{
+        height: 300px;
+        width: 300px;
+    }
+
+    #moldingGears span{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+
+
+@media(min-width: 951px){
+    /* Main page first picture position */
+    #intro{
+        background-position: 0 -200px;
+    }
+}
+
+@media(min-width: 901px){
+    /*This is a footer adjustment */
+   footer{
+        height: 180px;
+    }
+    
+    footer #footer-top{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    footer #footer-top p{
+        flex: 1;
+    }
+    
+    footer #footer-top p:last-child{
+        display: flex; /*This is special for media 501 */
+        justify-content: flex-end; /*This is special for media 501 */
+    }
+}
+
+@media(max-width: 900px){
+    /*This is a footer adjustment */
+    footer{
+        height: 270px;
+    }
+    
+    footer #footer-top{
+        flex-direction: column;
+    }
+    
+    #aboutUsContent > div{
+        height: 200px;
+        
+        /*
+        background-position: center bottom; */
+        
+        
+        /*background-position: 0 44px;*/
+        /*
+        background-repeat: no-repeat;*/
+    }
+}
+
+@media(max-width: 701px){
+    /*This is a footer adjustment */
+   div nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 601px){
+    
+    #menu{
+        background: rgb(245,246,246); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+    }
+    
+    #menu div{
+        width: 160px;
+    }
+    
+    #logo{
+        height: 75px;
+        width: 306px;
+    }
+    
+    #menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 100%;
+        top: 0;
+        position: absolute;
+    }
+    
+    #myNav img{
+        display: none;
+    }
+    
+    #bodypartNfooter{
+        position: relative;
+       top: 100px; 
+    }
+
+    div nav{
+        display: flex;
+      /* This flexbox property lets button area to fill-in the remainin space until the logo area */
+        flex: 1;
+        
+    }
+
+    div nav ul{
+        display: flex;
+        flex-direction: row;
+        background-color: mediumaquamarine;
+        justify-content: space-between;
+        flex: 1; 
+      /* This flexbox property lets button area to fill-in the remainin space until the logo area */
+    }
+
+    div nav ul li{
+        display: flex; /* These 3 lines or the align the bottons vertically */
+        flex-direction: column; /* These 3 lines align the bottons vertically */
+        justify-content: center; /* These 3 lines align the bottons vertically */
+        list-style-type: none;
+        background-color: white;
+        flex: 1; 
+      /* This flexbox property lets button area to fill-in the remainin space until the logo area */
+        position: relative;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+        background: rgb(245,246,246); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+
+    }
+
+    div nav ul li a{
+        display: flex; /* These 3 lines or the align the bottons vertically */
+        flex-direction: column; /* These 3 lines align the bottons vertically */
+        justify-content: center; /* These 3 lines align the bottons vertically */
+        text-decoration: none;
+        background-color: white;
+        height: 50px;
+        text-align: center;
+        margin: 0.5px;
+        border: 1px solid rgba(36, 78, 90, 1);
+        border-radius: 5px;
+        color: black;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+        background: rgb(245,246,246); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(245,246,246,1) 0%, rgba(219,220,226,1) 21%, rgba(184,186,198,1) 49%, rgba(221,223,227,1) 80%, rgba(245,246,246,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+    }
+
+    div nav ul li a:hover{
+        background-color: #f0f0f0;
+        border: 1px solid #626262;
+        color: #626262;
+        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    }
+    
+    
+    #mobileNavMessage{
+        display: none;
+    }
+
+    .dropdownMenu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        top: 63px;
+        position: absolute;
+        overflow: hidden;
+        height: 0;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        z-index: 1000;
+    }
+
+    .dropdownMenu.show {
+        overflow:visible;
+        height: 100px;
+    }
+    
+    a#close-dropdown{
+        display: none;
+    }
+}
+
+@media(max-width: 600px){
+
+    #logo{
+        height: 60px;
+        width: 245px;
+        
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
+        background: rgb(255,255,255); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    }
+    
+    #menu{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
+        z-index: 1000;
+        
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
+        background: rgb(255,255,255); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    }
+    
+    #logo{
+        display: block; /*These 2 lines are to center logo on x-axis */
+        margin-left: 55px; /*These 2 lines are to center logo on x-axis */
+        -webkit-transition: .1s;
+        -moz-transition: .1s;
+        -ms-transition: .1s;
+        -o-transition: .1s;
+        transition: .1s;
+    }
+    
+    #burger{
+        display: block;
+        cursor: pointer;
+        background-color: #fafafa;
+        height: 40px;
+        border: 1px solid #fafafa;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 100%;
+        position: fixed;
+        
+        border-color: gray;
+        border-style: solid;
+        border-width: 1px 0 1px 0;
+        
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4e4ef+0,86aecc+100;Grey+Gloss */
+        background: #d4e4ef; /* Old browsers */
+        background: -moz-linear-gradient(top, #d4e4ef 0%, #86aecc 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #d4e4ef 0%,#86aecc 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #d4e4ef 0%,#86aecc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc',GradientType=0 ); /* IE6-9 */
+    }
+    
+    .bar1, .bar2, .bar3{
+        width: 30px;
+        height: 5px;
+        background-color: #5c5c5c;
+        margin: 6px 0;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
+    }
+    
+    .change .bar1{
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2{
+        opacity: 0;
+    }
+    
+    .change .bar3{
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+    
+    #myNav{
+        display: column;
+        opacity: 0.98;
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        width: 0;
+        overflow-x: hidden;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
+        background: #74ebd5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+        font-family: "Prociono";
+    }
+    
+    #myNav span{
+        height: 50px;
+        margin-left: 15px;
+        margin-top: 25px;
+        border-bottom: 2px solid black;
+    }
+    
+    #myNav img{
+        height: 50px;
+        margin-left: 15px;
+        margin-top: 25px;
+    }
+    
+    .dropdownMenu{
+        display: column;
+        margin-top: 0px;
+        margin-left: 10px;
+        height: 0;
+        overflow-y: hidden;
+        opacity: 0;
+        
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    
+    .dropdownMenu.show {
+        overflow-y: visible;
+        height: 60px;
+        opacity: 1;
+    }
+    
+    div nav ul li{
+        list-style-type: none;
+        
+        /*This gives more gap in between home, about us etc. */
+        margin: 10px;
+    }
+    
+    div nav ul{
+        height: 60%;
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+
+    div nav ul li a{
+        text-decoration: none;
+        border-bottom: 1px solid #532929;
+        padding-bottom: 2px;
+        font-size: 19px;
+        /*color: #b0c5ff; */
+	
+        color: black;
+        
+    }
+    
+    div nav ul li a:hover{
+        color: white;
+    }
+    
+    footer{
+        height: 380px;
+    }
+    
+    #bodypartNfooter{
+        position: absolute;
+        top: 100px;
+    }
+    
+    
+    #mobileNavMessage{
+        display: block;
+        position: absolute; 
+        bottom: 30px;
+        left: 5px;
+        color: black;
+        font-size: 15px;
+        font-style: oblique;
+    }
+}
+
+
+@media(max-width: 253px){
+    
+    footer{
+        height: 450px;
+    }
+    
+    footer #footer-top{
+        flex-direction: column;
+    }
+    
+    body{
+        font-size: 15px;
+    }
+    
+    .dropdownMenu.show {
+        height: 48px;
+    }
+}
+
+@media(max-width: 210px){
+    
+    footer{
+        height: 450px;
+    }
+    
+    footer #footer-top{
+        flex-direction: column;
+    }
+    
+    body{
+        font-size: 12px;
+    }
+    
+    .dropdownMenu.show {
+        height: 48px;
+    }
+}
